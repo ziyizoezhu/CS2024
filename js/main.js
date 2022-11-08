@@ -316,7 +316,7 @@ $('.popup-video').magnificPopup({
 // isotop
 var $grid = $('.gallery').isotope({
 	itemSelector: '.gallery__item',
-	layoutMode: 'fitRows'
+	// layoutMode: 'fitRows'
 });
 $('.gallery').imagesLoaded( function() {
 	// init Isotope
@@ -343,10 +343,6 @@ $('.portfolio-menu li').on('click', function(event) {
 });
 
 });
-
-
-
-
 
 
 

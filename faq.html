@@ -27,10 +27,6 @@
 </head>
 
 <body>
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your <a href="#" class="theme-color">Experience</a> and security.</p>
-        <![endif]-->
-    <!-- header area start -->
     <div id="loading">
         <div id="loading-center">
             <div id="loading-center-absolute">
@@ -40,8 +36,9 @@
                 <div class="object" id="object_four"></div>
             </div>
         </div>
-    </div>
 
+    </div>
+    
     <header>
         <div class="header-area">
             <div class="header-top header-top-2 d-none d-sm-block">
@@ -49,8 +46,8 @@
                     <div class="row">
                         <div class="col-xl col-6 col-lg col-md">
                             <div class="header-left header__left--2">
-                                <span class="mr-20 text-white">Welcome to YouForia</span>
-                                <div class="lang d-none d-lg-inline-block">
+                                <!-- <span class="mr-20 text-white">Welcome to YouForia</span> -->
+                                <div class="lang d-none d-lg-inline-block mt-10">
                                     <ul>
                                         <li><a href="#">English</a>
                                             <ul>
@@ -70,7 +67,7 @@
                             <div class="header-social header-social__2 text-right">
                                 <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-                                <a href="#" class="text-white"><i class="fab fa-behance"></i></a>
+                                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
                                 <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
                                 <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
                             </div>
@@ -95,10 +92,27 @@
                                             <nav class="pl-60" id="mobile-menu">
                                                 <ul>
                                                     <li><a href="index.html">Home</a></li>
-                                                    <li><a href="about.html">About</a></li>
-                                                    <li><a href="portfolio.html">Treatments</a></li>
+                                                    <li><a href="portfolio.html">Treatments</a>
+                                                        <ul class="submenu">
+                                                            <li><a href="#">Face</a>
+                                                            <ul class="submenu">    
+                                                                <li><a href="facelift.html">Facelift</a></li>
+                                                                <li><a href="botox.html">Botox</a></li> 
+                                                                <li><a href="fillers.html">Dermal Fillers</a></li>
+                                                            </ul></li>
+
+                                                            <li><a href="#">Eyes</a>
+                                                            <ul class="submenu">
+                                                                <li><a href="radiofrequency.html">Radiofrequency</a></li>
+                                                                <li><a href="hifu.html">HIFU</a></li>
+                                                                <li><a href="tear.html">Tear Trough</a></li>
+                                                            </ul></li>
+                                                        </ul>
+                                                    </li>
                                                     <li><a href="promotion.html">Promotion</a></li>
-                                                    <li><a href="faq.html" class="active">Faq</a></li>
+                                                    <li><a href="doctor-details.html">Our Doctors</a></li>
+                                                    <li><a href="about.html">About</a></li>
+                                                    <li><a href="faq.html" class="active">FAQ</a></li>
                                                     <li><a href="contact.html">Contact</a></li>
                                                     <!-- <li><a href="#">Pages</a>
                                                         <ul class="submenu">
@@ -136,9 +150,8 @@
                                 <div class="header-right header-right-2">
 
                                     <div class="has-border f-left d-none d-xl-block">
-                                        <a href="price-plan.html"
-                                            class="generic-btn d-none d-xxl-inline-block btn-1 ">Get
-                                            Appointment</a>
+                                        <a href="" class="generic-btn d-none d-xxl-inline-block btn-1" data-bs-toggle="modal"
+                                        data-bs-target="#appointment-modal">Get Appointment</a>
                                     </div>
                                     <div
                                         class="mobile-toggle-bar mobile-toggle-bar-2 mobile-toggle-bar-3 d-inline-block d-lg-none">
@@ -341,7 +354,7 @@
             </div>
         </nav>
         <div class="responsive-logo">
-            <a href="index.html"><img src="img/logo/logo.png" alt=""></a>
+            <a href="index.html"><img src="img/logo/textlogo.png" alt=""></a>
         </div>
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="menu-tab-1" role="tabpanel" aria-labelledby="menu-tab-1-tab">
@@ -616,8 +629,8 @@
     </main>
 
 
-   <!-- footer area start -->
-   <footer class="footer footer-2" data-background="img/bg/footer-bg.jpg">
+<!-- footer area start -->
+<footer class="footer footer-2" data-background="img/bg/footer-bg.jpg">
     <div class="container">
         <div class="footer__top">
             <div class="row">
@@ -628,9 +641,10 @@
                 </div>
                 <div class="col-xl col-lg col-md">
                     <div class="text-start text-md-end">
-                        <div class="social__icon social__icon--2">
+                        <div class="social__icon social__icon--2 mt-30">
                             <a href="#"><i class="fab fa-facebook-f"></i></a>
                             <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
                             <a href="#"><i class="fab fa-youtube"></i></a>
                             <a href="#"><i class="fab fa-linkedin"></i></a>
                         </div>
@@ -643,14 +657,11 @@
                 <div class="col-xl-3 col-lg-6 col-md-6">
                     <div class="footer__left mb-30">
                         <h4 class="title">About Us</h4>
-                        <p>Because it does not spend hours selling
-                            to customers, maintaining a brick and mortar stores, or paying for a commissions</p>
+                        <p>First time trying aesthetic services? Rest assured you are in good hands as we pride ourselves as a safe and clinically proven aesthetic service company.</p>
                         <div class="contact__list contact__list--2">
                             <ul>
-                                <li><i class="fal fa-phone"></i> <span><b>Phone: </b> 096 095 657 87</span></li>
-                                <li><i class="fal fa-envelope"></i> <span><b>Email: </b> info@webexample.com</span>
-                                </li>
-                                <li><i class="fal fa-envelope"></i> <span><b>Mon-Sat: </b>10:00AM - 09:00PM</span>
+                                <li><i class="fal fa-phone"></i> <span><b>Phone: </b> +65-88889999</span></li>
+                                <li><i class="fal fa-envelope"></i> <span><b>Email: </b> zylsoplx@youforia.com</span>
                                 </li>
                             </ul>
                         </div>
@@ -664,13 +675,13 @@
                                 <div class="footer__list">
                                     <ul>
                                         <li><a href="index.html">Home</a></li>
-                                        <li><a href="service-details.html">Features</a></li>
-                                        <li><a href="service.html">Services</a></li>
-                                        <li><a href="price-plan.html">Pricing</a></li>
-                                        <li><a href="team.html">Team</a></li>
-                                        <li><a href="faq.html">Terms Conditions</a></li>
-                                        <li><a href="case-details.html">Privacy Policy</a></li>
-                                        <li><a href="news-details.html">News Insights</a></li>
+                                        <li><a href="portfolio.html">Treatment</a></li>
+                                        <li><a href="promotion.html">Promotion</a></li>
+                                        <li><a href="doctor-details.html">Our Doctors</a></li>
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="pdpa.html">Privacy Policy</a></li>
+                                        <!-- <li><a href="news-details.html">News Insights</a></li> -->
                                         <li><a href="faq.html">Faq</a></li>
                                     </ul>
                                 </div>
@@ -679,25 +690,20 @@
                                 <h4 class="titleTips How to repair your by yourselft">Our Services</h4>
                                 <div class="footer__list">
                                     <ul>
-                                        <li><a href="service-details.html">Face Lift</a></li>
-                                        <li><a href="service-details.html">Skin Implant</a></li>
-                                        <li><a href="service-details.html">Face Filler</a></li>
-                                        <li><a href="service-details.html">Eye & Eyelids</a></li>
-                                        <li><a href="service-details.html">Rhinoplasty</a></li>
-                                        <li><a href="faq.html">Terms Conditions</a></li>
-                                        <li><a href="service-details.html">Botex Solutions</a></li>
-                                        <li><a href="service-details.html">Breast Implent</a></li>
-                                        <li><a href="service-details.html">Breast </a>
-                                        <li>
-                                        <li><a href="service-details.html">Radiease</a></li>
-                                        <li><a href="service-details.html">Implent</a></li>
+                                        <li><a href="facelift.html">Facelift</a></li>
+                                        <li><a href="botox.html">Botox</a></li> 
+                                        <li><a href="fillers.html">Dermal Fillers</a></li>
+                                        <li><a href="radiofrequency.html">Radiofrequency</a></li>
+                                        <li><a href="hifu.html">HIFU</a></li>
+                                        <li><a href="tear.html">Tear Trough Filler</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-6 col-md-6">
+                
+                <!-- <div class="col-xl-3 col-lg-6 col-md-6">
                     <div class="footer__right mb-30">
                         <h4 class="titleTips How to repair your by yourselft">News Feeds</h4>
                         <div class="footer__news--item">
@@ -742,7 +748,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -753,6 +759,106 @@
     </div>
 </footer>
 <!-- footer area end -->
+
+<!-- Get Appointment Modal -->
+<div class="modal fade" id="appointment-modal" tabindex="-1" aria-labelledby="appointment-modal" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="" id="exampleModalLabel">Request An Appointment</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="contact__form  mt-10">
+            <form id="book-form" action="#" style="width: 80%;margin-left: auto;margin-right: auto;">
+                <div class="row">
+                    <div class="col-md-6 product-animated-left">
+                        <div class="form-group">
+                            <label for="b_salut" class="hide">Salutation</label>
+                            <select name="salutation" class="form-control blue" id="b_salut" required>
+                                <option selected disabled>Please Select *</option>
+                                <option value="Mr">Mr</option>
+                                <option value="Mrs">Mrs</option>
+                                <option value="Mdm">Mdm</option>
+                                <option value="Ms">Ms</option>
+                                <option value="Miss">Miss</option>
+                                <option value="Dr">Dr</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 product-animated-right">
+                        <div class="form-group">
+                            <label for="b_name" class="hide">Name</label>
+                            <input class="form-control blue" type="text" placeholder="Name *" name="b_name" id="b_name" required/>
+                        </div>
+                    </div>
+                    <div class="col-md-6 product-animated-left">
+                        <div class="form-group">
+                            <label for="b_mobile" class="hide">Mobile</label>
+                            <input class="form-control blue only-number" type="text" placeholder="Mobile *" name="b_mobile" id="b_mobile" required/>
+                        </div>
+                    </div>
+                    <div class="col-md-6 product-animated-right">
+                        <div class="form-group">
+                            <label for="b_home_mobile" class="hide">Home Mobile</label>
+                            <input class="form-control blue only-number" type="text" placeholder="Home No " name="home-no" id="b_home_mobile" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 product-animated-left">
+                        <div class="form-group">
+                            <label for="b_email" class="hide">Email</label>
+                            <input class="form-control blue" type="email" placeholder="Email Address *" name="email" id="b_email" required/>
+                        </div>
+                    </div>
+                    <div class="col-md-6 product-animated-right">
+                        <div class="form-group">
+                            <label for="datetimepicker" class="hide">Preferred Date and Time</label>
+                            <input type="text" id="datetimepicker" class="form-control" name="date_time" value="" placeholder="Please Select Preferred Date and Time *" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row product-animated-left">
+                    <div class="col-md-6 product-animated-left">
+                        <div class="form-group">
+                            <label for="b_location" class="hide">What are you enquirying about</label>
+                            <select name="doctor-before" class="form-control blue" id="b_location" required>
+                                <option selected disabled>Please Select*</option>
+                                <option value="Face">Face</option>
+                                <option value="Eyes">Eyes</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 product-animated-right">
+                        <div class="form-group">
+                            <label>Is this your first visit to Youforia?</label>
+                            <div class="css-radio">
+                                <div class="custom-radio mr-10">
+                                    <input type="radio" class="custom-control-input radioConsul" id="consultation-yes" name="consultation" value="yes" onclick="consultationYes();">
+                                    <label class="custom-control-label" for="consultation-yes">Yes</label>
+                                </div>
+                                <div class="custom-radio">
+                                    <input type="radio" class="custom-control-input radioConsul" id="consultation-no" name="consultation" value="no"ww>
+                                    <label class="custom-control-label" for="consultation-no" onclick="consultationNo();">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group product-animated-bottom">
+                    <label for="b_comment">Special Request / Comment</label>
+                    <textarea class="form-control blue" type="text" name="b_comment" id="b_comment"></textarea>
+                </div>
+                <br>
+                <div class="text-right product-animated-right mb-10">
+                    <button class="btn btn-1" type="submit" id="submit-btn">
+                        <a>Submit</a>
+                    </button>
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+</div>
 
 
 

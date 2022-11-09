@@ -2298,19 +2298,7 @@ button.mobile-nav-close {
     right: auto;
   }
 }
-.about-area__wrapper::before {
-  content: "20+ Years Experience";
-  position: absolute;
-  bottom: 65px;
-  transform: rotate(-90deg);
-  color: #fff;
-  font-size: 14px;
-  text-transform: uppercase;
-  line-height: 32px;
-  right: -73px;
-  font-family: "Roboto";
-  font-weight: 300;
-}
+
 @media only screen and (max-width: 1700px) {
   .about-area__wrapper::before {
     right: auto;
@@ -3634,7 +3622,7 @@ a.featured-btn:hover i {
   }
 }
 .slider-text__2 h2 {
-  font-size: 140px;
+  font-size: 100px;
   margin-bottom: 55px;
   line-height: 1;
 }
@@ -8479,7 +8467,7 @@ a.replay-btn i {
   margin-bottom: 20px;
 }
 .contact__icon i {
-  font-size: 15px;
+  font-size: 18px;
   color: #fff;
 }
 .contact__desc {
@@ -8487,7 +8475,6 @@ a.replay-btn i {
 }
 .contact__desc span {
   color: #dcd9d9;
-  line-height: 1;
   font-size: 14px;
   display: block;
 }

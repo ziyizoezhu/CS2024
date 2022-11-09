@@ -6511,6 +6511,17 @@ a.replay-btn i {
   color: #fff;
 }
 
+.brand__img:before {
+  content:"";
+  position: absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background: rgba(113, 46, 30,0.5);
+  z-index:999;
+}
+
 .brand__img img {
   width: inherit !important;
   margin: auto;

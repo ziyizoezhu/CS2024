@@ -393,7 +393,7 @@
         <div class="slider-area">
             <div class="slider-active">
                 <div class="single-slider p-rel slider-2 d-flex align-items-center slider-height slider-height-2"
-                    data-background="img/slider/slider-2.jpg">
+                    data-background="img/index/bg.jpg">
                     <div class="container p-rel h-100 d-flex align-items-center">
                         <div class="slider-text slider-text__2 p-rel">
                             <h1>Exclusive<br>
@@ -476,7 +476,7 @@
                         <div class="about__left">
                             <div class="generic-title">
                                 <span>Treatments</span>
-                                <h4>Swipe to see the Sculptra Before and After</h4>
+                                <h4>Swipe to see the Sculptra<br>Before and After</h4>
                             </div>
                             <div class="about__text about__text-2">
                                 <p class="desc">Janet is a business consultant that often interact with clients. Due to the stress she face, her skin started to sag. She went through the Sculptra treatment and the before and after shows the improvement in fine lines and wrinkles, helping her restore her youthful skin.</p>
@@ -892,15 +892,15 @@
         </div>
         <!-- team area end -->
         <!-- banner 1 area start -->
-        <div class="banner__1 pt-110 pb-120 mt-120" data-background="img/bg/banner-1.jpg">
+        <div class="banner__1 pt-110 pb-120 mt-120" data-background="img/bg/banner-1.jpg" id="subscribe_section">
             <div class="container">
                 <div class="banner__1--content">
                     <div class="generic-title text-center">
-                        <h4 class="text-white">Be Beautiful From Today</h4>
-                    </div>
-                    <div class="banner__1--text text-center mt-40">
-                        <a href="#" class="generic-btn transparent-btn-1" data-bs-toggle="modal"
-                        data-bs-target="#appointment-modal">Make Appointment</a>
+                        <h4 class="text-white">Subscribe To Our Newsletter</h4>
+                        <form action="#" id="subscribe" class="mt-50">
+                            <input type="https://www.google.com/" placeholder="Email (e.g. someone@host.com)" />
+                            <input type="submit" value="Subscribe" class="btn btn-1"/>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -1071,6 +1071,8 @@
                             <p>#02-02 International Building</p>
                             <p>Singapore 238869</p>
                         </div>
+                        <h4 class="title mt-30">Subscribe to our Mailing List</h4>
+                        <a href="#subscribe_section"><button class="btn btn-1">Subscribe Now</button></a>
                     </div>
 
                     <div class="col-xl-4 col-lg-4 col-md-4">
@@ -1234,91 +1236,12 @@
     <script src="js/main.js"></script>
     <script type="text/javascript" src="https://www.idsclinic.com/js/datepicker/jquery.datetimepicker.full.min.js" defer></script>
     <script type="text/javascript">
-        $(document).ready(function () {
-            jQuery.extend(jQuery.validator.messages, {
-                required: "This field is required",
-                email: "Please enter a valid email address",
-            });
-            jQuery.validator.addMethod("latin", function(value, element) {
-                return this.optional(element) || /^[a-zA-Z0-9\s,'-]*$/g.test(value);
-            }, "Please input alphabet characters only");
-            // $('.nav-contact').addClass('active');
-            // $('#submit-btn').on('click', function(){
-            // 	console.log($("#datetimepicker").val());
-            // });
-            $('#book-form').validate({ 
-                rules: {
-                                        b_name: {latin:true},
-                        b_comment: {latin:true},
-                                },
-                submitHandler: function(form) {
-                    const b_salut = $("#b_salut").val();
-                    const b_name = $("#b_name").val();
-                    const b_email = $("#b_email").val();
-                    const b_mobile = $("#b_mobile").val();
-                    const b_home_mobile = $("#b_home_mobile").val();
-                    const radioDoctor = $(".radioDoctor:checked").val();
-                    const b_doctor = $("#b_doctor").val();
-                    var radioTreatment = { 'treatment' : []};
-                    $(".radioTreatment:checked").each(function() {
-                        radioTreatment['treatment'].push($(this).val());
-                    });
-                    var myCheckboxes = radioTreatment.treatment.join();
-                    const radioConsul = $(".radioConsul:checked").val();
-                    const b_location = $("#b_location").val();
-                    const b_comment = $("#b_comment").val();
-                    const date = $("#datetimepicker").val();
-                    var data = {
-                        salutation: b_salut,
-                        name: b_name,
-                        email: b_email,
-                        contact_no: b_mobile,
-                        home_no: b_home_mobile,
-                        date_time: date,
-                        doctor: radioDoctor,
-                        preferred_doctor: b_doctor,
-                        preferred_location: b_location,
-                        first_visit: radioConsul,
-                        hear_about_us: '',
-                        treatment_of_interest: myCheckboxes,
-                        comment: b_comment,
-                    }
-                    let recaptcha = $("#g-recaptcha-response").val();
-                    if (recaptcha === "") {
-                        event.preventDefault();
-                        $("#captchaAlert").modal("toggle");
-                    }
-                    else {
-                        $.ajax({
-                            method: 'POST',
-                            url: mainlink + 'api/v1/book_now',
-                            data: data,
-                            beforeSend: function(msg){
-                                $("#successBook").modal("toggle");
-                                document.getElementById("book-form").reset();
-                                console.log(msg);
-                            },
-                            success: function(msg){
-                            },
-                            error: function(msg){
-                                $("#failedInquiry").modal("toggle");
-                                document.getElementById("book-form").reset();
-                            }
-                        });
-                    }
-                },
-            });
-            $('#b_location').change(function(){
-                $('.box-doctor').show();
-                $('#above_selected').html("<select name='doctor' class='form-control blue' id='b_doctor' required></select>");
-                if($(this).val() == 'Novena'){
-                    $('#b_doctor').append('<option selected disabled>Please Select Preferred Doctor *</option><option value="Dr SK Tan">Dr SK Tan</option><option value="Dr Ian Tan">Dr Ian Tan</option><option value="Dr Liz Lum YX">Dr Liz Lum YX</option>');					
-                }
-                else{
-                    $('#b_doctor').append('<option selected disabled>Please Select Preferred Doctor *</option><option value="Dr SK Tan">Dr SK Tan</option><option value="Dr Ben Yim">Dr Ben Yim</option><option value="Dr Michelle">Dr Michelle</option>');
-                }
-            })
-        });
+        var form = document.querySelector('form');
+
+        form.onsubmit = function(e) {
+        e.preventDefault();
+        }
+        
         $(function() {
             $('#datetimepicker').datetimepicker({
                 // minDate:new Date(),

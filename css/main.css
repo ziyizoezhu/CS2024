@@ -9147,4 +9147,21 @@ span.details-pro-price {
   color: white;
   margin-left: 10px;
 }
+.carousel_banner{
+  width: 5%;
+  border: none;
+  background-color: #712E1E;
+}
+.vip_section h1{
+  color:#c4a362;
+}
+.vip_section{
+  padding:50px;
+}
+.vip_area{
+  background-color: #4a4e57;
+}
+.promotion_banner{
+  background-color: #ebdae0;
+}
 /*# sourceMappingURL=main.css.map */
